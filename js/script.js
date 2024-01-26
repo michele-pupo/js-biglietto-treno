@@ -28,7 +28,7 @@ if (age < 18){
 } else if (age >= 18 && age <= 65){
     console.log("prezzo intero");
     // utente over 65
-}else (age > 65){
+} else {
     // sconto del 40%
     console.log("-40%");
 }

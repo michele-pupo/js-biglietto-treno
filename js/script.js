@@ -27,6 +27,7 @@ document.getElementById("km-travelled").innerHTML = kilometres;
 
 // prezzo al chilometro
 const priceForKm = 0.21;
+
 // sconti per fascia di età
 const percentageOfMinors = 20;
 const percentageOver65 = 40;

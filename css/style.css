@@ -1,0 +1,29 @@
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container{
+    width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.container h1{
+    margin: 10px;
+}
+
+.container span{
+    color: darkred; 
+    font-size: 25px;
+    font-weight: bold;
+}

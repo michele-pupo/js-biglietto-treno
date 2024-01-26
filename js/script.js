@@ -13,22 +13,43 @@
 // chiediamo all'utente come si chiama
 const firstname = prompt("Come ti chiami?")
 
+document.getElementById("first-name").innerHTML = firstname;
+
 // chiediamo all'utente quanti anni ha
 const age = prompt("Quanti anni hai?")
+
+document.getElementById("years").innerHTML = age;
 
 //  chiediamo all'utente quanti chilometri deve fare
 const kilometres = prompt("Quanti chilometri devi fare?")
 
+document.getElementById("km-travelled").innerHTML = kilometres;
 
-// utente minorenne
+// prezzo al chilometro
+const priceForKm = 0.21;
+// sconti per fascia di età
+const percentageOfMinors = 20;
+const percentageOver65 = 40;
+
+
+// utente minorenne sconto 20%
 if (age < 18){
     // sconto del 20%
     console.log("-20%");
+    // calcolo prezzo del biglietto
+    document.getElementById("ticket-price").innerHTML = (((priceForKm * kilometres) -(((priceForKm * kilometres) / 100) * percentageOfMinors)));
+
     // utente con età compresa tra 18 e 65 niente sconto
-} else if (age >= 18 && age <= 65){
+} else if (age >= 18 && age < 65){
     console.log("prezzo intero");
-    // utente over 65
+    // calcolo prezzo del biglietto
+    document.getElementById("ticket-price").innerHTML = (priceForKm * kilometres);
+
+    // utente over 65 sconto 40%
 } else {
     // sconto del 40%
     console.log("-40%");
+    // calcolo prezzo del biglietto
+    document.getElementById("ticket-price").innerHTML = (((priceForKm * kilometres) -(((priceForKm * kilometres) / 100) * percentageOver65)));
 }
+

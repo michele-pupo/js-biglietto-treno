@@ -27,10 +27,13 @@ document.getElementById("km-travelled").innerHTML = kilometres;
 
 // prezzo al chilometro
 const priceForKm = 0.21;
-
 // sconti per fascia di età
 const percentageOfMinors = 20;
 const percentageOver65 = 40;
+
+// calcolo prezzo biglietto intero con doppia cifra dopo la virgola
+const priceToTicket = ((priceForKm * kilometres).toFixed(2));
+
 
 // calcolo sconto
 // calcolo sconto minorenni
@@ -38,9 +41,6 @@ const discountForMinors = (((priceToTicket / 100) * percentageOfMinors));
 // calcolo sconto over 65
 const discountForOver65 = (((priceToTicket / 100) * percentageOver65));
 
-
-// doppia cifra dopo la virgola prezzo intero
-const priceToTicket = ((priceForKm * kilometres).toFixed(2));
 
 // utente minorenne sconto 20%
 if (age < 18){
@@ -62,4 +62,3 @@ if (age < 18){
     // calcolo prezzo del biglietto
     document.getElementById("ticket-price").innerHTML =  `${(priceToTicket - discountForOver65).toFixed(2)} €`;
 }
-

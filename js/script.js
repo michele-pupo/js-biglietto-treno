@@ -31,25 +31,34 @@ const priceForKm = 0.21;
 const percentageOfMinors = 20;
 const percentageOver65 = 40;
 
+// calcolo sconto
+// calcolo sconto minorenni
+const discountForMinors = (((priceToTicket / 100) * percentageOfMinors));
+// calcolo sconto over 65
+const discountForOver65 = (((priceToTicket / 100) * percentageOver65));
+
+
+// doppia cifra dopo la virgola prezzo intero
+const priceToTicket = ((priceForKm * kilometres).toFixed(2));
 
 // utente minorenne sconto 20%
 if (age < 18){
     // sconto del 20%
     console.log("-20%");
     // calcolo prezzo del biglietto
-    document.getElementById("ticket-price").innerHTML = (((priceForKm * kilometres) -(((priceForKm * kilometres) / 100) * percentageOfMinors)));
+    document.getElementById("ticket-price").innerHTML = `${(priceToTicket - discountForMinors).toFixed(2)} €`;
 
     // utente con età compresa tra 18 e 65 niente sconto
 } else if (age >= 18 && age < 65){
     console.log("prezzo intero");
     // calcolo prezzo del biglietto
-    document.getElementById("ticket-price").innerHTML = (priceForKm * kilometres);
+    document.getElementById("ticket-price").innerHTML = `${(priceToTicket)} €`;
 
     // utente over 65 sconto 40%
 } else {
     // sconto del 40%
     console.log("-40%");
     // calcolo prezzo del biglietto
-    document.getElementById("ticket-price").innerHTML = (((priceForKm * kilometres) -(((priceForKm * kilometres) / 100) * percentageOver65)));
+    document.getElementById("ticket-price").innerHTML =  `${(priceToTicket - discountForOver65).toFixed(2)} €`;
 }
 

@@ -8,6 +8,26 @@ body {
     font-family: sans-serif;
 }
 
+.container{
+    padding: 40px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    color: red;
+}    
+
+h1 span{
+    color: black;
+    text-transform: uppercase;
+}
+
+#temperature-fahrenheit{
+    font-weight: bold; 
+}
+
 .img{
     position: absolute;
 }

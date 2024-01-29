@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.img{
+    position: absolute;
+}
+
+.text{
+    position: relative;
+    margin-top: 190px;
+    margin-left: 460px;
+    font-size: 60px;
+    color: red;
+}
